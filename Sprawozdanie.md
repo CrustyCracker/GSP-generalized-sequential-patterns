@@ -23,7 +23,7 @@ W dzisiejszej erze danych, gromadzenie ogromnych ilości informacji stało się 
 
 Projekt skupia się na analizie sekwencji zdarzeń w dużych zbiorach danych. Szczególnie ważna jest identyfikacja częstych sekwencji zdarzeń lub transakcji, takich jak historia zakupów klientów w sklepach detalicznych czy sekwencje odwiedzanych stron internetowych przez użytkowników. Algorytm GSP pozwala na odkrycie istotnych wzorców zachowań lub preferencji, co może być użyteczne w podejmowaniu decyzji biznesowych, personalizacji ofert czy optymalizacji interfejsów użytkownika. Poprzez jego zastosowanie, dane wejściowe przetwarzane są w postaci sekwencji zdarzeń, ustalane jest minimalne wsparcie, a następnie identyfikowane są sekwencje spełniające to kryterium. Dzięki temu możliwe jest wyróżnienie istotnych wzorców, umożliwiając bardziej szczegółową analizę i trafniejsze decyzje biznesowe. Wsparcie należy rozumieć jako liczbę występowania zjawiska w bazie danych.
 
-## 
+## Sposób działania algorytmu GSP
 
 1. Tworzenie częstych jednoelementowych zbiorów: W pierwszym kroku identyfikowane są pojedyncze elementy występujące często w danych sekwencyjnych.
 2. Generowanie kandydatów: Na podstawie częstych jednoelementowych zbiorów generowane są kandydaci na częste sekwencje dwuelementowe poprzez łączenie jednoelementowych zbiorów.
@@ -76,3 +76,22 @@ pomeszać bazy, porównać do innych implementacji gsp
 Tak
 - Czy implementować w czystym Pythonie? Pythonowe loopy są okrutnie wolne... więc użyć bibliotek
 Python
+
+
+## TEST
+Number of frequent patterns with min_support=0.01: 9932
+Time taken: 413.12 seconds
+Number of frequent patterns with min_support=0.02: 246
+Time taken: 85.19 seconds
+Number of frequent patterns with min_support=0.03: 89
+Time taken: 16.67 seconds
+Number of frequent patterns with min_support=0.04: 40
+Time taken: 3.37 seconds
+Number of frequent patterns with min_support=0.05: 17
+Time taken: 0.62 seconds
+Number of frequent patterns with min_support=0.06: 6
+Time taken: 0.11 seconds
+Number of frequent patterns with min_support=0.08: 1
+Time taken: 0.05 seconds
+Number of frequent patterns with min_support=0.1: 0
+Time taken: 0.05 seconds
